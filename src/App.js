@@ -47,57 +47,54 @@ function App() {
 
   return (
     <div className="container">
-      <h1> Cash register manager </h1>
-      <p> Enter the amount and cash given by the customer and know minimum number of notes to return </p>
-      <form>
-        <label> Bill amount </label><br />
-        <input type="number" onChange={(e) => setBill(parseInt(e.target.value))} required />
-        <button
-          hidden={!showCash}
-          onClick={(e) => handleNextClick(e)}> Next </button>
-        <div
-          hidden={showCash}
-        >
-          <label> Cash given </label><br />
-          <input type="number" onChange={(e) => setCash(parseInt(e.target.value))} required />
-          <button onClick={(e) => handleCheckClick(e)}> Check </button>
+      <div className="content">
+        <h1> Cash register manager </h1>
+        <p> Enter the bill and amount of cash given by customer, to know how to return money in minimum denominations. </p>
+        <form>
+          {/* <label> Bill amount </label><br /> */}
+          <input className="input" placeholder="Enter bill amount" type="number" onChange={(e) => setBill(parseInt(e.target.value))} required />
+          <button
+            hidden={!showCash}
+            className="btnNext"
+            onClick={(e) => handleNextClick(e)}> Next </button>
           <div
-            hidden={showTable}
+            hidden={showCash}
           >
-            <h1> Table </h1>
-            <table>
-              <tbody>
-                <tr>
-                  <th> No. of notes </th>
+            <input placeholder="Enter cash given" className="input" type="number" onChange={(e) => setCash(parseInt(e.target.value))} required />
+            <button className="btnNext" onClick={(e) => handleCheckClick(e)}> Check </button>
+            <div
+              hidden={showTable}
+            >
+              <h2> Return change </h2>
+              <table>
+                <tbody>
+                  <tr>
+                    <th className="dark"> No. of notes </th>
 
-                  {
-                    change.map((e) => {
-                      return (
-                        <td> {e} </td>
-                      )
-                    })
-                  }
-                </tr>
-                <tr>
-                  <th> Notes </th>
-                  <td>2000 </td>
-                  <td>500 </td>
-                  <td>100 </td>
-                  <td>20 </td>
-                  <td>10 </td>
-                  <td>5 </td>
-                  <td>1 </td>
-                </tr>
-              </tbody>
-            </table>
+                    {
+                      change.map((e) => {
+                        return (
+                          <td className="light"> {e} </td>
+                        )
+                      })
+                    }
+                  </tr>
+                  <tr className="dark">
+                    <th> Notes </th>
+                    <td>2000 </td>
+                    <td>500 </td>
+                    <td>100 </td>
+                    <td>20 </td>
+                    <td>10 </td>
+                    <td>5 </td>
+                    <td>1 </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
-      </form>
-
-
-
-
-
+        </form>
+      </div>
     </div>
   );
 }

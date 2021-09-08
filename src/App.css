@@ -1,3 +1,67 @@
 .container{
+    background-image: url('./cash.jfif');
+background-size: cover;
+height: 80vh;
+text-align: center;
+background-position: center;
+padding: 5%;
+font-family: 'Urbanist', sans-serif;
+font-size: 130%;
+}
 
+.content{
+    background: rgba(255, 255, 255, 0.836);
+    padding: 5%;
+    text-align: left;
+}
+.input{
+    border: none;
+    padding: 1%;
+    background: none;
+    font-family: 'Urbanist', sans-serif;
+    outline: none;
+    font-size: 100%;
+    margin-bottom: 20px;
+    width: 300px;
+    border-bottom: 2px solid rgb(19, 19, 110);
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+.btnNext{
+    background: #340299;
+    color: white;
+    border: #340299;
+    padding: 10px 30px 10px 30px;
+    border-radius: 8px;
+    margin: 10px 0px 15px 80px;
+    font-size: 80%;
+    outline: none;
+    font-family: 'Urbanist', sans-serif;
+    letter-spacing: 1px;
+}
+.btnNext:hover{
+    cursor: pointer;
+    background: rgba(55, 5, 156, 0.753);
+    transition-duration: 0.5s;
+}
+td{
+    text-align: center;
+    width: 80px;
+    padding: 1%;
+}
+th{
+    padding: 1%;
+}
+.dark{
+    background: #340299;
+    color: white;
+}
+.light{
+    background: #bfa3f8;
+    color: black;
 }
