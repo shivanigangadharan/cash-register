@@ -29,7 +29,7 @@ function App() {
       setShowTable(false);
       let difference = parseInt(cash - bill);
       var t = [];
-      if (cash > bill) {
+      if (cash >= bill) {
         notes.map((e, i) => {
           t.push(Math.floor(difference / e));
           // setChange([...change, t]);
